@@ -23,7 +23,11 @@ public class ComputerController {
                                @RequestParam(name = "number2" , required = false , defaultValue = "Please choose") double inputNumber2 ,
                                @RequestParam(value = "calculation") String calculation , Model model){
         double sum = computerService.sumInputNumber(inputNumber1,inputNumber2,calculation);
-        model.addAttribute("sum",sum);
+        if (inputNumber2 != 0){
+            model.addAttribute("sum",sum);
+        }else {
+            model.addAttribute("message", "Cannot make this calculate with inputNumber 2 = zero");
+        }
         return "index";
     }
 }

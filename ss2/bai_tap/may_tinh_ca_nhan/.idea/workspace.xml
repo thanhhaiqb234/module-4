@@ -5,21 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3578d51f-f5ce-4f95-aef4-d03579c09504" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/controller/ComputerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/service/ComputerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/service/IComputerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ung_dung_hien_thi_gia_vi/src/main/java/com/codegym/controller/SpiceController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ung_dung_hien_thi_gia_vi/src/main/java/com/codegym/service/ISpiceService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ung_dung_hien_thi_gia_vi/src/main/java/com/codegym/service/SpiceService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ung_dung_hien_thi_gia_vi/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ung_dung_hien_thi_gia_vi/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/ung_dung_kiem_tra_email/src/main/java/com/codegym/controller/EmailController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/ung_dung_kiem_tra_email/src/main/java/com/codegym/service/Check.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/ung_dung_kiem_tra_email/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/ung_dung_kiem_tra_email/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/ung_dung_kiem_tra_email/src/main/webapp/WEB-INF/views/cuccess.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/controller/ComputerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/controller/ComputerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ung_dung_hien_thi_gia_vi/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ung_dung_hien_thi_gia_vi/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ung_dung_hien_thi_gia_vi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ung_dung_hien_thi_gia_vi/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ung_dung_hien_thi_gia_vi/src/main/java/com/codegym/controller/SpiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ung_dung_hien_thi_gia_vi/src/main/java/com/codegym/controller/SpiceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ung_dung_hien_thi_gia_vi/src/main/java/com/codegym/service/ISpiceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ung_dung_hien_thi_gia_vi/src/main/java/com/codegym/service/ISpiceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ung_dung_hien_thi_gia_vi/src/main/java/com/codegym/service/SpiceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ung_dung_hien_thi_gia_vi/src/main/java/com/codegym/service/SpiceService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +24,23 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="may_tinh_ca_nhan" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -60,6 +71,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/codegym/module_4/ss2/bai_tap/ung_dung_hien_thi_gia_vi",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -67,6 +79,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
+    "spring.configuration.checksum": "a45e9d2699461874e12ab1577cca5460",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -173,6 +186,7 @@
       <option name="presentableId" value="Default" />
       <updated>1694769357411</updated>
       <workItem from="1694769358415" duration="3174000" />
+      <workItem from="1695107110930" duration="1747000" />
     </task>
     <servers />
   </component>
@@ -188,9 +202,9 @@
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/codegym/controller/ComputerController.java</url>
-          <line>24</line>
-          <option name="timeStamp" value="3" />
+          <url>file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp</url>
+          <line>18</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

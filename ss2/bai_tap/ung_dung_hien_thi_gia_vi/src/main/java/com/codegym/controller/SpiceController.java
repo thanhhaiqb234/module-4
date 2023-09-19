@@ -20,9 +20,8 @@ public class SpiceController {
         return "index";
     }
     @PostMapping("/spice")
-    public String chooseSpices(@RequestParam(value = "spice",required = false,defaultValue = "Please choose") String[] spices,Model model){
-        String[] spice = spiceService.checkSpice(spices);
-        model.addAttribute("spice",spice);
+    public String chooseSpices(@RequestParam(value = "spice",required = false,defaultValue = "Let you choice") String[] spices,Model model){
+        model.addAttribute("spice",spices);
         return "index";
     }
 }
