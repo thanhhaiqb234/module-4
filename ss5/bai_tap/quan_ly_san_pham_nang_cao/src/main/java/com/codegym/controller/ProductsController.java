@@ -5,9 +5,7 @@ import com.codegym.service.IProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
@@ -31,5 +29,16 @@ public class ProductsController {
     public String detailProduct(@PathVariable int id, Model model){
         List<Products> productsList = productService.getProduct(id);
         return "detail";
+    }
+
+    @GetMapping("/create")
+    public String createProduct(){
+        return "create";
+    }
+
+    @PostMapping("create")
+    public String addProduct(@ModelAttribute Products products,RequestMapping requestMapping) {
+        productService.addProduct(products);
+        return "redirect:/product";
     }
 }

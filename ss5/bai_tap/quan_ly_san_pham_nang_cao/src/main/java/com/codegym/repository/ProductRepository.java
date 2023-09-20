@@ -18,4 +18,14 @@ public class ProductRepository implements IProductRepository{
         TypedQuery<Products> query = entityManager.createQuery("from Products", Products.class);
         return query.getResultList();
     }
+
+    @Override
+    public List<Products> getProduct(int id) {
+        return null;
+    }
+
+    @Override
+    public void addProduct(Products products) {
+        entityManager.persist(products);
+    }
 }
