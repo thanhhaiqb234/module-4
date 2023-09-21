@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
+import javax.transaction.Transactional;
 import java.util.List;
 
 @Repository
@@ -18,14 +19,22 @@ public class ProductRepository implements IProductRepository{
         TypedQuery<Products> query = entityManager.createQuery("from Products", Products.class);
         return query.getResultList();
     }
-
-    @Override
-    public List<Products> getProduct(int id) {
-        return null;
-    }
-
+    @Transactional
     @Override
     public void addProduct(Products products) {
         entityManager.persist(products);
+    }
+
+    @Override
+    public Products getProduct(int id) {
+        return entityManager.find(Products.class,id);
+    }
+
+
+    @Transactional
+    @Override
+    public void delete(int id) {
+        Products product = getProduct(id);
+        entityManager.remove(product);
     }
 }

@@ -18,13 +18,17 @@ public class ProductService implements IProductService{
     }
 
     @Override
-    public List<Products> getProduct(int id) {
+    public void addProduct(Products products) {
+        productRepository.addProduct(products);
+    }
 
+    @Override
+    public Products getProduct(int id) {
         return productRepository.getProduct(id);
     }
 
     @Override
-    public void addProduct(Products products) {
-        productRepository.addProduct(products);
+    public void delete(int id) {
+        productRepository.delete(id);
     }
 }

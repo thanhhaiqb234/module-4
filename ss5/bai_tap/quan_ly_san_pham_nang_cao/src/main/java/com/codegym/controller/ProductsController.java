@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.List;
 
@@ -27,18 +28,27 @@ public class ProductsController {
 
     @GetMapping("/{id}/formDetail")
     public String detailProduct(@PathVariable int id, Model model){
-        List<Products> productsList = productService.getProduct(id);
+        Products products = productService.getProduct(id);
+        model.addAttribute("products",products);
         return "detail";
     }
 
-    @GetMapping("/create")
-    public String createProduct(){
-        return "create";
-    }
-
-    @PostMapping("create")
-    public String addProduct(@ModelAttribute Products products,RequestMapping requestMapping) {
+    @PostMapping("/create")
+    public String addProduct(@ModelAttribute Products products, RedirectAttributes redirectAttributes) {
         productService.addProduct(products);
         return "redirect:/product";
     }
+    @GetMapping("/create")
+    public String createProduct(Model model){
+        model.addAttribute("products",new Products());
+        return "create";
+    }
+
+    @GetMapping("/{id}/delete")
+    public String deleteProduct(@PathVariable int id){
+        productService.delete(id);
+        return "redirect:/product";
+    }
+
+
 }
