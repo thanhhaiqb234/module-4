@@ -37,4 +37,21 @@ public class ProductRepository implements IProductRepository{
         Products product = getProduct(id);
         entityManager.remove(product);
     }
+
+    @Override
+    public Products eidtProduct(int id) {
+        return entityManager.find(Products.class,id);
+    }
+
+
+    @Transactional
+    @Override
+    public void updateProduct(int id, Products products) {
+        Products product = getProduct(id);
+        product.setName(products.getName());
+        product.setPrice(products.getPrice());
+        product.setDescription(products.getDescription());
+        product.setSupplier(products.getSupplier());
+        entityManager.merge(product);
+    }
 }

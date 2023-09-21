@@ -12,4 +12,8 @@ public interface IProductRepository {
     Products getProduct(int id);
 
     void delete(int id);
+
+    Products eidtProduct(int id);
+
+    void updateProduct(int id, Products products);
 }
