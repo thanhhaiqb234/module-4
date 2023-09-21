@@ -43,7 +43,6 @@ public class ProductRepository implements IProductRepository{
         return entityManager.find(Products.class,id);
     }
 
-
     @Transactional
     @Override
     public void updateProduct(int id, Products products) {

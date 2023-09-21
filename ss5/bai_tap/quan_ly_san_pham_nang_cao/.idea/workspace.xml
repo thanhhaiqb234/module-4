@@ -5,13 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="883b1e05-a0a2-48fc-8e3c-cebc81bb22cc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../ss6/bai_tap/ung_dung_blog_ca_nhan/src/main/java/com/example/ung_dung_blog_ca_nhan/controller/ProductsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss6/bai_tap/ung_dung_blog_ca_nhan/src/main/java/com/example/ung_dung_blog_ca_nhan/model/Products.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss6/bai_tap/ung_dung_blog_ca_nhan/src/main/java/com/example/ung_dung_blog_ca_nhan/repository/IProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss6/bai_tap/ung_dung_blog_ca_nhan/src/main/java/com/example/ung_dung_blog_ca_nhan/service/IProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss6/bai_tap/ung_dung_blog_ca_nhan/src/main/java/com/example/ung_dung_blog_ca_nhan/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss6/bai_tap/ung_dung_blog_ca_nhan/src/main/resources/templates/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss6/bai_tap/ung_dung_blog_ca_nhan/src/main/resources/templates/detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss6/bai_tap/ung_dung_blog_ca_nhan/src/main/resources/templates/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss6/bai_tap/ung_dung_blog_ca_nhan/src/main/resources/templates/list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/controller/ProductsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/controller/ProductsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/repository/IProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/repository/IProductRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/repository/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/service/IProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/service/IProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/layuot.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/edit.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,26 +76,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/codegym/module_4/ss5/bai_tap/quan_ly_san_pham_nang_cao&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;78edd19693d2525436254d2419b4e793&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/codegym/module_4/ss6/bai_tap",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "spring.configuration.checksum": "78edd19693d2525436254d2419b4e793",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.761">
     <configuration name="quan_ly_san_pham_nang_cao [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -225,7 +229,7 @@
       <workItem from="1695215330745" duration="5138000" />
       <workItem from="1695221050170" duration="1229000" />
       <workItem from="1695250639502" duration="3116000" />
-      <workItem from="1695265203789" duration="2739000" />
+      <workItem from="1695265203789" duration="7126000" />
     </task>
     <servers />
   </component>
@@ -239,11 +243,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/codegym/controller/ProductsController.java</url>
           <line>60</line>
           <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/codegym/repository/ProductRepository.java</url>
-          <line>49</line>
-          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
