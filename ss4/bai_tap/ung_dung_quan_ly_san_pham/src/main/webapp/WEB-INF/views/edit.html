@@ -5,6 +5,37 @@
     <title>Title</title>
 </head>
 <body>
+<form th:object="${}" th:action="@{/product/update}" method="post">
+    <table>
+        <tr>
+            <th>Update Product</th>
+        </tr>
+        <tr>
+            <td><input th:field="*{id}" th:text="${productList}" style="display: none"></td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td><input th:field="*{name}" th:text="${productList.name}"></td>
+        </tr>
+        <tr>
+            <td>Price</td>
+            <td><input th:field="*{price}" th:text="${productList.price}"></td>
+        </tr>
+        <tr>
+            <td>Description</td>
+            <td><input th:field="*{description}" th:text="${productList.description}"></td>
+        </tr>
+        <tr>
+            <td>Supplier</td>
+            <td><input th:field="*{supplier}" th:text="${productList.supplier}"></td>
+        </tr>
+        <tr>
+            <td>
+                <button type="submit">Save</button>
+            </td>
+        </tr>
+    </table>
+</form>
 
 </body>
 </html>
