@@ -23,15 +23,19 @@ public class ProductRepository implements IProductRepository{
     }
 
     @Override
-    public List<Product> productDetail(int id) {
-        List<Product> products = new ArrayList<>();
+    public Product productDetail(int id) {
+        Product product = new Product();
         for (int i = 0; i < productList.size(); i++) {
             if (productList.get(i).getId() == id){
-                products.add(productList.get(i));
+                product.setId(productList.get(i).getId());
+                product.setName(productList.get(i).getName());
+                product.setPrice(productList.get(i).getPrice());
+                product.setDescription(productList.get(i).getDescription());
+                product.setSupplier(productList.get(i).getSupplier());
                 break;
             }
         }
-        return products;
+        return product;
     }
 
     @Override
@@ -39,6 +43,7 @@ public class ProductRepository implements IProductRepository{
         for (int i = 0; i < productList.size(); i++) {
             if (productList.get(i).getId() == id){
                 productList.remove(i);
+                break;
             }
         }
     }
@@ -48,9 +53,27 @@ public class ProductRepository implements IProductRepository{
         Product product = new Product();
         for (int i = 0; i < productList.size(); i++) {
             if (productList.get(i).getId() == id){
-                product.getId();
+                product.setId(productList.get(i).getId());
+                product.setName(productList.get(i).getName());
+                product.setPrice(productList.get(i).getPrice());
+                product.setDescription(productList.get(i).getDescription());
+                product.setSupplier(productList.get(i).getSupplier());
+                break;
             }
         }
-        return null;
+        return product;
+    }
+
+    @Override
+    public void updateProduct(int id ,Product product) {
+        for (int i = 0; i < productList.size(); i++) {
+            if (productList.get(i).getId() == id){
+                productList.get(i).setName(product.getName());
+                productList.get(i).setPrice(product.getPrice());
+                productList.get(i).setDescription(product.getDescription());
+                productList.get(i).setSupplier(product.getSupplier());
+                break;
+            }
+        }
     }
 }

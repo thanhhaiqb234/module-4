@@ -5,29 +5,29 @@
     <title>Title</title>
 </head>
 <body>
-<form th:object="${}" th:action="@{/product/update}" method="post">
+<form th:object="${product}" th:action="@{/product/update(id=${id})}" method="post">
     <table>
         <tr>
             <th>Update Product</th>
         </tr>
         <tr>
-            <td><input th:field="*{id}" th:text="${productList}" style="display: none"></td>
+            <td style="display: none"><input th:field="*{id}" th:text="${product.id}" style="display: none"></td>
         </tr>
         <tr>
             <td>Name</td>
-            <td><input th:field="*{name}" th:text="${productList.name}"></td>
+            <td><input th:field="*{name}" ></td>
         </tr>
         <tr>
             <td>Price</td>
-            <td><input th:field="*{price}" th:text="${productList.price}"></td>
+            <td><input th:field="*{price}" ></td>
         </tr>
         <tr>
             <td>Description</td>
-            <td><input th:field="*{description}" th:text="${productList.description}"></td>
+            <td><input th:field="*{description}" ></td>
         </tr>
         <tr>
             <td>Supplier</td>
-            <td><input th:field="*{supplier}" th:text="${productList.supplier}"></td>
+            <td><input th:field="*{supplier}" ></td>
         </tr>
         <tr>
             <td>

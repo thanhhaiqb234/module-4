@@ -5,6 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="883b1e05-a0a2-48fc-8e3c-cebc81bb22cc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../ss7/bai_tap/mo_rong_ung_dung_blog/src/main/java/com/example/mo_rong_ung_dung_blog/controller/BlogController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss7/bai_tap/mo_rong_ung_dung_blog/src/main/java/com/example/mo_rong_ung_dung_blog/model/Blog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss7/bai_tap/mo_rong_ung_dung_blog/src/main/java/com/example/mo_rong_ung_dung_blog/repository/IBolgRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss7/bai_tap/mo_rong_ung_dung_blog/src/main/java/com/example/mo_rong_ung_dung_blog/service/BolgService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss7/bai_tap/mo_rong_ung_dung_blog/src/main/java/com/example/mo_rong_ung_dung_blog/service/IBlogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss7/bai_tap/mo_rong_ung_dung_blog/src/main/resources/templates/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss4/bai_tap/ung_dung_quan_ly_san_pham/src/main/java/com/example/products/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss4/bai_tap/ung_dung_quan_ly_san_pham/src/main/java/com/example/products/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss4/bai_tap/ung_dung_quan_ly_san_pham/src/main/java/com/example/products/repository/IProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss4/bai_tap/ung_dung_quan_ly_san_pham/src/main/java/com/example/products/repository/IProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss4/bai_tap/ung_dung_quan_ly_san_pham/src/main/java/com/example/products/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss4/bai_tap/ung_dung_quan_ly_san_pham/src/main/java/com/example/products/repository/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss4/bai_tap/ung_dung_quan_ly_san_pham/src/main/java/com/example/products/service/IProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss4/bai_tap/ung_dung_quan_ly_san_pham/src/main/java/com/example/products/service/IProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss4/bai_tap/ung_dung_quan_ly_san_pham/src/main/java/com/example/products/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss4/bai_tap/ung_dung_quan_ly_san_pham/src/main/java/com/example/products/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss4/bai_tap/ung_dung_quan_ly_san_pham/src/main/webapp/WEB-INF/views/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss4/bai_tap/ung_dung_quan_ly_san_pham/src/main/webapp/WEB-INF/views/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss4/bai_tap/ung_dung_quan_ly_san_pham/src/main/webapp/WEB-INF/views/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss4/bai_tap/ung_dung_quan_ly_san_pham/src/main/webapp/WEB-INF/views/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss4/bai_tap/ung_dung_quan_ly_san_pham/src/main/webapp/WEB-INF/views/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss4/bai_tap/ung_dung_quan_ly_san_pham/src/main/webapp/WEB-INF/views/list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -72,7 +86,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/codegym/module_4/ss6/bai_tap",
+    "last_opened_file_path": "D:/codegym/module_4/ss4/bai_tap/ung_dung_quan_ly_san_pham",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -220,6 +234,7 @@
       <workItem from="1695221050170" duration="1229000" />
       <workItem from="1695250639502" duration="3116000" />
       <workItem from="1695265203789" duration="7470000" />
+      <workItem from="1695371955219" duration="1758000" />
     </task>
     <servers />
   </component>

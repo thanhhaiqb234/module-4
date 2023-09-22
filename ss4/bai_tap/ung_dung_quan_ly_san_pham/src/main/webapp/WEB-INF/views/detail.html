@@ -16,12 +16,12 @@
         <th>Mô tả</th>
         <th>Nhà sản xuất</th>
     </tr>
-    <tr th:each="product:${productList}">
-        <td th:text="${product.id}"></td>
-        <td th:text="${product.name}"></td>
-        <td th:text="${product.price}"></td>
-        <td th:text="${product.description}"></td>
-        <td th:text="${product.supplier}"></td>
+    <tr th:each="product:${products}">
+        <td th:text="${products.id}"></td>
+        <td th:text="${products.name}"></td>
+        <td th:text="${products.price}"></td>
+        <td th:text="${products.description}"></td>
+        <td th:text="${products.supplier}"></td>
     </tr>
     <tr>
         <td>

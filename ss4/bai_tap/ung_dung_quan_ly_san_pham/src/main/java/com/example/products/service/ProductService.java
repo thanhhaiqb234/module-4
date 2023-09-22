@@ -18,7 +18,7 @@ public class ProductService implements IProductService{
     }
 
     @Override
-    public List<Product> productDetail(int id) {
+    public Product productDetail(int id) {
         return productRepository.productDetail(id);
     }
 
@@ -30,5 +30,10 @@ public class ProductService implements IProductService{
     @Override
     public Product productEdit(int id) {
         return productRepository.productEdit(id);
+    }
+
+    @Override
+    public void updateProduct(int id ,Product product) {
+        productRepository.updateProduct(id,product);
     }
 }
