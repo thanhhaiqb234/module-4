@@ -1,7 +1,5 @@
 package com.example.mo_rong_ung_dung_blog.model;
 
-import org.springframework.context.annotation.Configuration;
-
 import javax.persistence.*;
 
 @Entity
@@ -9,24 +7,24 @@ public class Blog {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String ten;
-    private double gia;
-    private String tenTacGia;
-    private int soTrang;
-    private String ngaySanXuat;
-    private String anh;
+    @Column(unique = true)
+    private String name;
+    private double price;
+    private String author;
+
+    @ManyToOne
+    @JoinColumn(columnDefinition = "category_id" ,referencedColumnName = "id")
+    private Category category;
 
     public Blog() {
     }
 
-    public Blog(int id, String ten, double gia, String tenTacGia, int soTrang, String ngaySanXuat, String anh) {
+    public Blog(int id, String name, double price, String author, Category category) {
         this.id = id;
-        this.ten = ten;
-        this.gia = gia;
-        this.tenTacGia = tenTacGia;
-        this.soTrang = soTrang;
-        this.ngaySanXuat = ngaySanXuat;
-        this.anh = anh;
+        this.name = name;
+        this.price = price;
+        this.author = author;
+        this.category = category;
     }
 
     public int getId() {
@@ -37,51 +35,35 @@ public class Blog {
         this.id = id;
     }
 
-    public String getTen() {
-        return ten;
+    public String getName() {
+        return name;
     }
 
-    public void setTen(String ten) {
-        this.ten = ten;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public double getGia() {
-        return gia;
+    public double getPrice() {
+        return price;
     }
 
-    public void setGia(double gia) {
-        this.gia = gia;
+    public void setPrice(double price) {
+        this.price = price;
     }
 
-    public String getTenTacGia() {
-        return tenTacGia;
+    public String getAuthor() {
+        return author;
     }
 
-    public void setTenTacGia(String tenTacGia) {
-        this.tenTacGia = tenTacGia;
+    public void setAuthor(String author) {
+        this.author = author;
     }
 
-    public int getSoTrang() {
-        return soTrang;
+    public Category getCategory() {
+        return category;
     }
 
-    public void setSoTrang(int soTrang) {
-        this.soTrang = soTrang;
-    }
-
-    public String getNgaySanXuat() {
-        return ngaySanXuat;
-    }
-
-    public void setNgaySanXuat(String ngaySanXuat) {
-        this.ngaySanXuat = ngaySanXuat;
-    }
-
-    public String getAnh() {
-        return anh;
-    }
-
-    public void setAnh(String anh) {
-        this.anh = anh;
+    public void setCategory(Category category) {
+        this.category = category;
     }
 }

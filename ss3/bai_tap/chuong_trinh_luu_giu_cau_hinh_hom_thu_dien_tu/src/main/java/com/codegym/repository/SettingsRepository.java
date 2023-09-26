@@ -14,10 +14,6 @@ public class SettingsRepository implements ISettingsRepository{
 
     static {
         settingsList.add(new Settings(1,"Vietnamese",5,true,"King,Asgard"));
-        settingsList.add(new Settings(2,"English",10,false,"King,Asgard"));
-        settingsList.add(new Settings(3,"Japanese",15,true,"King,Asgard"));
-        settingsList.add(new Settings(4,"Chinese",20,false,"King,Asgard"));
-        settingsList.add(new Settings(5,"Russia",25,true,"King,Asgard"));
 
         stringList.add("English");
         stringList.add("Vietnamese");

@@ -9,39 +9,40 @@
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
-<h1 style="text-align: center">Settings</h1>
-
-<table class="table table-dark table-striped">
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%--
+  Created by IntelliJ IDEA.
+  User: admin
+  Date: 9/18/2023
+  Time: 10:35 AM
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head>
+    <title>Title</title>
+</head>
+<body>
+<table>
     <tr>
-        <th>Numerical Order</th>
-        <th>Languages</th>
-        <th>Page Size</th>
-        <th>Spams Filter</th>
-        <th>Signature</th>
+        <th>STT</th>
+        <th>languages</th>
+        <th>page size</th>
+        <th>Spams filter</th>
+        <th>signature</th>
         <th></th>
     </tr>
 
-    <c:forEach items="${settingsList}" varStatus="sothutu" var="settingList">
-        <tr>
-            <td><c:out value="${sothutu.count}"/></td>
-            <td><c:out value="${settingList.languages}"/></td>
-            <td><c:out value="${settingList.pageSize}"/></td>
-            <c:choose>
-                <c:when test="${settingList.spamsFilter == true}">
-                    <td>Turn off</td>
-                </c:when>
-                <c:when test="${settingList.spamsFilter == false}">
-                    <td>Turn on</td>
-                </c:when>
-            </c:choose>
-            <td><c:out value="${settingList.signature}"/></td>
-            <td>
-                       <button type="submit">
-                           <a href="/settings/setting/update/${settingList.id}" style="color: black ; text-decoration: none">Update</a>
-                       </button>
-            </td>
-        </tr>
-    </c:forEach>
+    <tr>
+        <c:forEach var="setting" items="${settingsList}" varStatus="count">
+            <td><c:out value="${count.count}"/></td>
+            <td><c:out value="${setting.languages}"/></td>
+            <td><c:out value="${setting.pageSize}"/></td>
+            <td><c:out value="${setting.spamsFilter}"/></td>
+            <td><c:out value="${setting.signature}"/></td>
+        </c:forEach>
+    </tr>
 </table>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

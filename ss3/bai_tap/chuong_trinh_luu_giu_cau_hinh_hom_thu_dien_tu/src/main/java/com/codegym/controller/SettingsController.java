@@ -18,19 +18,11 @@ public class SettingsController {
     @Autowired
     private ISettingsService settingsService;
     @GetMapping("/list")
-    public ModelAndView showMail(){
+    public ModelAndView showMail(Model model){
         List<Settings> settingsList = settingsService.showMail();
         ModelAndView modelAndView =new ModelAndView("index","settingsList",settingsList);
         return modelAndView;
     }
-    @GetMapping("/setting/update/{id:[1-100]}")
-    public String settingCreate(@PathVariable int id,Model model){
-        List<Settings> settingsList = settingsService.search(id);
-        List<String> stringList = settingsService.showLanguages();
-        List<Integer> integerList = settingsService.showPageSize();
-        model.addAttribute("settingsList",settingsList);
-        model.addAttribute("stringList",stringList);
-        model.addAttribute("integerList",integerList);
-        return "update";
-    }
+
+
 }
