@@ -1,9 +1,13 @@
 package com.example.mo_rong_ung_dung_blog.service;
 
+import com.example.mo_rong_ung_dung_blog.model.Blog;
 import com.example.mo_rong_ung_dung_blog.model.Category;
 import com.example.mo_rong_ung_dung_blog.repository.ICategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+
 import java.util.List;
 
 @Service
@@ -11,10 +15,6 @@ public class CategoryService implements ICategoryService{
 
     @Autowired
     private ICategoryRepository categoryRepository;
-    @Override
-    public List<Category> showList() {
-        return categoryRepository.findAll();
-    }
 
     @Override
     public Category editCategory(int id) {
@@ -35,5 +35,10 @@ public class CategoryService implements ICategoryService{
     public void deleteCategory(int id) {
         Category category = categoryRepository.findById(id).get();
         categoryRepository.delete(category);
+    }
+
+    @Override
+    public Page<Category> showList(Pageable pageable, String seachName) {
+        return categoryRepository.findAllByNameContaining(pageable,seachName);
     }
 }

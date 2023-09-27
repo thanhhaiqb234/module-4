@@ -3,12 +3,15 @@ package com.example.mo_rong_ung_dung_blog.controller;
 import com.example.mo_rong_ung_dung_blog.model.Category;
 import com.example.mo_rong_ung_dung_blog.service.ICategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import java.util.List;
 
 @Controller
 @RequestMapping("/category")
@@ -20,10 +23,12 @@ public class CategoryController {
 
 
     @GetMapping("/list")
-    public String listCategory(Model model){
-        List<Category> categoryList = categoryService.showList();
-        model.addAttribute("categoryList",categoryList);
-        return "list-category";
+    public ModelAndView listCategory(@RequestParam(defaultValue = "0",required = false)int page,
+                                     @RequestParam(defaultValue = "",required = false) String seachName){
+        Pageable pageable =  PageRequest.of(page,3);
+        Page<Category> categoryPage = categoryService.showList(pageable,seachName);
+        ModelAndView modelAndView = new ModelAndView("list-category","categoryPage",categoryPage);
+        return modelAndView;
     }
 
     @GetMapping("/edit/{id}")

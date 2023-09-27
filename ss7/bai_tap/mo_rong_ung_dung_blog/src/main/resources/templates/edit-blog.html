@@ -9,7 +9,7 @@
   <table>
     <tr>
       <td>
-        <input style="display: none" th:field="${blog.id}">
+        <input style="display: none"  th:field="*{id}" id="id" name="id">
       </td>
     </tr>
     <tr>
@@ -17,22 +17,22 @@
     </tr>
     <tr>
       <td>
-        Tên Danh Mục : <input th:field="${blog.name}" id="name" name="name">
+        Tên Danh Mục : <input th:field="*{name}" id="name" name="name">
       </td>
     </tr>
     <tr>
       <td>
-        Giá : <input th:field="${blog.price}" id="price" name="price">
+        Giá : <input th:field="*{price}" id="price" name="price">
       </td>
     </tr>
     <tr>
       <td>
-        Tác Giả : <input th:field="${blog.author}" id="author" name="author">
+        Tác Giả : <input th:field="*{author}" id="author" name="author">
       </td>
     </tr>
     <tr >
       <td>
-<!--        <input th:field="${blog.category.id}" id="category" name="category" style="display: none">-->
+        <input th:field="*{category}" id="category" name="category" style="display: none">
       </td>
     </tr>
     <tr>

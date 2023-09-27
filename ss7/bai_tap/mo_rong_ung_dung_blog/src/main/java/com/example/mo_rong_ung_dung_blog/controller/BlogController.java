@@ -1,7 +1,6 @@
 package com.example.mo_rong_ung_dung_blog.controller;
 
 import com.example.mo_rong_ung_dung_blog.model.Blog;
-import com.example.mo_rong_ung_dung_blog.model.Category;
 import com.example.mo_rong_ung_dung_blog.service.IBlogService;
 import com.example.mo_rong_ung_dung_blog.service.ICategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,11 +15,12 @@ import java.util.List;
 @Controller
 @RequestMapping("/blog")
 public class BlogController {
+
+
     @Autowired
     private IBlogService blogService;
 
-    @Autowired
-    private ICategoryService categoryService;
+
     @GetMapping("/list/{categoryId}")
     public String getBlogList(@PathVariable int categoryId, Model model){
         List<Blog> blogList =blogService.findAll(categoryId);
@@ -37,8 +37,9 @@ public class BlogController {
 
     @PostMapping("/update")
     public String updateBlog(@ModelAttribute Blog blog, RedirectAttributes redirectAttributes){
+        int id = blog.getCategory().getId();
         blogService.updateBlog(blog);
-        return "redirect:/blog/list/";
+        return "redirect:/blog/list/"+id;
     }
 
     @GetMapping("/detail/{id}")
