@@ -23,14 +23,14 @@ public class CategoryController {
     public String listCategory(Model model){
         List<Category> categoryList = categoryService.showList();
         model.addAttribute("categoryList",categoryList);
-        return "list_category";
+        return "list-category";
     }
 
     @GetMapping("/edit/{id}")
     public String editCategory(@PathVariable int id , Model model){
         Category category = categoryService.editCategory(id);
         model.addAttribute("category",category);
-        return "edit_category";
+        return "edit-category";
     }
 
     @GetMapping("/detail/{id}")
@@ -38,5 +38,16 @@ public class CategoryController {
         return "redirect:/blog/list/"+id;
     }
 
+    @PostMapping("/update")
+    public String updateCategory(@ModelAttribute Category category , RedirectAttributes redirectAttributes){
+        categoryService.updateCategory(category);
+        return "redirect:/category/list";
+    }
+
+    @GetMapping("/delete/{id}")
+    public String deleteCategory(@PathVariable int id , RedirectAttributes redirectAttributes){
+        categoryService.deleteCategory(id);
+        return "redirect:/category/list";
+    }
 
 }

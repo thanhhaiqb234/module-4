@@ -10,4 +10,8 @@ public interface ICategoryService {
     Category editCategory(int id);
 
     Category finAllById(int categoryId);
+
+    void updateCategory(Category category);
+
+    void deleteCategory(int id);
 }

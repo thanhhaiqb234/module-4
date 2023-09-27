@@ -17,4 +17,26 @@ public class BolgService implements IBlogService{
     public List<Blog> findAll(int categoryId) {
         return blogRepository.findAll(categoryId);
     }
+
+    @Override
+    public Blog editBlog(int id) {
+        return blogRepository.findById(id).get();
+    }
+
+    @Override
+    public void updateBlog(Blog blog) {
+        blogRepository.save(blog);
+    }
+
+    @Override
+    public Blog detailBlog(int id) {
+        return blogRepository.findById(id).get();
+    }
+
+    @Override
+    public Blog deleteBlog(int id) {
+       Blog blog = blogRepository.findById(id).get();
+       blogRepository.delete(blog);
+       return blog;
+    }
 }

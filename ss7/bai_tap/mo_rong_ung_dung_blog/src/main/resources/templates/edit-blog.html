@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:object="${blog}" th:action="@{/blog/update}" method="post">
+  <table>
+    <tr>
+      <td>
+        <input style="display: none" th:field="${blog.id}">
+      </td>
+    </tr>
+    <tr>
+      <h1>Form Sửa Danh Mục</h1>
+    </tr>
+    <tr>
+      <td>
+        Tên Danh Mục : <input th:field="${blog.name}" id="name" name="name">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Giá : <input th:field="${blog.price}" id="price" name="price">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Tác Giả : <input th:field="${blog.author}" id="author" name="author">
+      </td>
+    </tr>
+    <tr >
+      <td>
+<!--        <input th:field="${blog.category.id}" id="category" name="category" style="display: none">-->
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <button type="submit">Cập nhật</button>
+      </td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

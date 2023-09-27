@@ -25,4 +25,15 @@ public class CategoryService implements ICategoryService{
     public Category finAllById(int categoryId) {
         return categoryRepository.findById(categoryId).get();
     }
+
+    @Override
+    public void updateCategory(Category category) {
+        categoryRepository.save(category);
+    }
+
+    @Override
+    public void deleteCategory(int id) {
+        Category category = categoryRepository.findById(id).get();
+        categoryRepository.delete(category);
+    }
 }
