@@ -7,6 +7,13 @@
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
+        <form th:href="@{/blog/list/}" method="get">
+            <div class="col-md-6">
+                <br><br><br><br>
+                <input name="searchName" placeholder="Nhập tên mà bạn muốn tìm kiếm">
+                <button type="submit">Tìm Kiếm</button>
+            </div>
+        </form>
 <table class="table table-hover">
 <tr>
     <th>STT</th>
@@ -18,7 +25,7 @@
     <th>Xóa</th>
 </tr>
 
-    <tr th:each="blog , status:${blogList}">
+    <tr th:each="blog , status:${blogPage}">
         <td th:text="${status.count}"></td>
         <td th:text="${blog.name}"></td>
         <td th:text="${blog.price}"></td>
@@ -28,7 +35,11 @@
         <td><a th:href="@{/blog/delete/__${blog.id}__}">Xóa</a></td>
     </tr>
 </table>
-
+<div>
+    <a th:if="${blogPage.hasPrevious()}" th:href="@{/blog/list/(page=${blogPage.number -1})}">Previous</a>
+    <span th:text="${blogPage.number + 1}"></span> <span th:text="${blogPage.totalPages}"></span>
+    <a th:if="${blogPage.hasNext()}" th:href="@{/blog/list/(page=${blogPage.number +1})}">Next</a>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"

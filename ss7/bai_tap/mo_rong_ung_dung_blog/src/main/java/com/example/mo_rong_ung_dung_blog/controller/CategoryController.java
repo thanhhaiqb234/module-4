@@ -39,7 +39,7 @@ public class CategoryController {
     }
 
     @GetMapping("/detail/{id}")
-    public String getCategoryDetail(@PathVariable int id){
+    public String getCategoryDetail(@PathVariable int id,RedirectAttributes redirectAttributes){
         return "redirect:/blog/list/"+id;
     }
 
