@@ -7,24 +7,22 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-
-    @Column(columnDefinition = "varchar(50) not null")
-    private String name;
-
-    @Column(columnDefinition = "varchar(10) not null")
+    private String firstName;
+    private String lastName;
+    @Column(unique = true)
     private String phone;
-
-    @Column(columnDefinition = "int not null")
     private int year;
-    @Column(columnDefinition = "varchar(100) not null")
+    @Column(unique = true)
     private String email;
+
 
     public User() {
     }
 
-    public User(int id, String name, String phone, int year, String email) {
+    public User(int id, String firstName, String lastName, String phone, int year, String email) {
         this.id = id;
-        this.name = name;
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.phone = phone;
         this.year = year;
         this.email = email;
@@ -38,12 +36,20 @@ public class User {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getPhone() {
