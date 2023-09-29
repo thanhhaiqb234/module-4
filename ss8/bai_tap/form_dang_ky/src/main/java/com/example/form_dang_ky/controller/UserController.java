@@ -40,7 +40,7 @@ public class UserController {
        return "create";
    }
 
-   @PostMapping("/form/create")
+   @PostMapping("/create")
     public String createUser(@Valid @ModelAttribute UserDto userDto,
                              BindingResult bindingResult,
                              RedirectAttributes redirectAttributes){

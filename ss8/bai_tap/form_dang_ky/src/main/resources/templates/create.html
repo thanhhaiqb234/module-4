@@ -9,7 +9,7 @@
 <body>
 <div class="container">
     <div class="row" style="text-align: center">
-        <form th:object="${userDto}" th:href="@{/user/create}" method="post">
+        <form th:object="${userDto}" action="/user/create" method="post">
             <div>
                 <h2>Form Add User</h2>
             </div>
@@ -40,10 +40,10 @@
                 <input th:field="*{email}" name="email" id="email" style="width: 200px"><br>
                 <small th:if="${#fields.hasErrors('email')}" th:errors="*{email}" style="color: crimson"></small>
             </div>
-            <br><br><br>
-            <div>
-                <button type="submit" style="width: 100px">Save</button>
-            </div>
+                <br><br><br>
+                <div>
+                    <button type="submit" style="width: 100px">Save</button>
+                </div>
         </form>
     </div>
 </div>
